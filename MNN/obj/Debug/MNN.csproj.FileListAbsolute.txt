@@ -1,0 +1,31 @@
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\bin\Debug\MNN.exe.config
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\bin\Debug\MNN.exe
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\bin\Debug\MNN.pdb
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.csprojResolveAssemblyReference.cache
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MainWindow.g.cs
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\App.g.cs
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN_MarkupCompile.cache
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN_MarkupCompile.lref
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MainWindow.baml
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.g.resources
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.Properties.Resources.resources
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.csproj.GenerateResource.Cache
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.exe
+e:\users\ítalo de moraes\documents\visual studio 2015\Projects\MNN\MNN\obj\Debug\MNN.pdb
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\bin\Debug\MNN.exe.config
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.exe
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.pdb
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.csprojResolveAssemblyReference.cache
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MainWindow.g.cs
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\App.g.cs
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN_MarkupCompile.cache
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN_MarkupCompile.lref
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\bin\Debug\MNN.exe
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\bin\Debug\MNN.pdb
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MainWindow.baml
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.g.resources
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.Properties.Resources.resources
+E:\Users\Ítalo de Moraes\Documents\GitHub\MNN\MNN\obj\Debug\MNN.csproj.GenerateResource.Cache
+E:\Users\Ítalo de Moraes\Desktop\MNN\bin\Debug\MNN.exe.config
+E:\Users\Ítalo de Moraes\Desktop\MNN\obj\Debug\MNN.exe
+E:\Users\Ítalo de Moraes\Desktop\MNN\obj\Debug\MNN.pdb
