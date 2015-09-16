@@ -86,8 +86,7 @@ namespace MNN
             {
                 List<int> vogaisIn = new List<int>();
                 List<int> consoantesIn = new List<int>();
-                foreach (char x in lista) ;
-                vogaisIn{
+                foreach (char x in lista){
                     if (isVogal(x))
                     {
                         vogaisIn.Add(ConvertePraNumero(x));
