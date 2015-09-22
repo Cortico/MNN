@@ -49,7 +49,8 @@ namespace MNN
         private void gerar_Click(object sender, RoutedEventArgs e)
         {
             calculaIdade();
-
+            tabelaPitagorica tp = new tabelaPitagorica();
+            tp.efetuaLeitura(nome.Text, data.DisplayDate.Date);
         }
     }
 }
