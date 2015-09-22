@@ -109,6 +109,16 @@ namespace MNN
             return aux2;
         }
 
+        private int calculaEX(int MO, int EU)
+        {
+            int EX = MO + EU;
+            if(EX >= 10 && EX != 11 && EX != 22)
+            {
+                EX = 1 + (EX - 1) % 9;
+            }
+            return EX;
+        }
+
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
         {
             leitura l = new leitura();
@@ -148,7 +158,8 @@ namespace MNN
 
             l.MO = calculaMO(vogais);
             l.EU = calculaEU(consoantes);
-
+            l.EX = calculaEX(l.MO, l.EU);
+            
             return l;
         }
 
