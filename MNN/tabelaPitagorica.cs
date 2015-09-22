@@ -73,25 +73,40 @@ namespace MNN
 
         public int calculaEU (List<List<int>> consoantes)
         {
-
-        int aux = 0, aux2 = 0;
-
-        foreach (List<int> i in consoantes)
-        {
-            aux = 0;
-            foreach (int v in i)
+            int aux = 0, aux2 = 0;
+            foreach (List<int> i in consoantes)
             {
-                aux = aux + v;
+                aux = 0;
+                foreach (int v in i)
+                {
+                    aux = aux + v;
+                }
+                    aux2 = (1 + (aux - 1) % 9) + aux2;
             }
-                aux2 = (1 + (aux - 1) % 9) + aux2;
-            }
-
             if (aux2 >= 10 && aux2 != 11 && aux2 != 22)
             {
                 aux2 = 1 + (aux2 - 1) % 9;
             }
+            return aux2;
+        }
 
-        return aux2;
+        public int calculaMO(List<List<int>> vogais)
+        {
+            int aux = 0, aux2 = 0;
+            foreach (List<int> i in vogais)
+            {
+                aux = 0;
+                foreach (int v in i)
+                {
+                    aux = aux + v;
+                }
+                aux2 = (1 + (aux - 1) % 9) + aux2;
+            }
+            if (aux2 >= 10 && aux2 != 11 && aux2 != 22)
+            {
+                aux2 = 1 + (aux2 - 1) % 9;
+            }
+            return aux2;
         }
 
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
@@ -131,6 +146,7 @@ namespace MNN
                 }
             }
 
+            l.MO = calculaMO(vogais);
             l.EU = calculaEU(consoantes);
 
             return l;
