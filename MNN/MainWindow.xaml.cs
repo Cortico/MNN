@@ -25,7 +25,7 @@ namespace MNN
             InitializeComponent();
             idade.Visibility = Visibility.Hidden;
             //tabelaPitagorica tp = new tabelaPitagorica();
-            //tp.efetuaLeitura("Diogo Bernini Milagres", DateTime.Today);
+            //leitura l = tp.efetuaLeitura("Diogo Bernini Milagres", DateTime.Today);
         }
 
         private int calculaIdade(){
@@ -50,7 +50,21 @@ namespace MNN
         {
             calculaIdade();
             tabelaPitagorica tp = new tabelaPitagorica();
-            tp.efetuaLeitura(nome.Text, data.DisplayDate.Date);
+            leitura l = tp.efetuaLeitura(nome.Text, data.SelectedDate.Value);
+            MO.Content = l.MO.ToString();
+            EU.Content = l.EU.ToString();
+            EX.Content = l.EX.ToString();
+            CD.Content = l.CD.ToString();
+            C1.Content = l.C1.ToString();
+            C2.Content = l.C2.ToString();
+            C3.Content = l.C3.ToString();
+            D1.Content = l.D1.ToString();
+            D2.Content = l.D2.ToString();
+            DM.Content = l.DM.ToString();
+            R1.Content = l.R1.ToString();
+            R2.Content = l.R2.ToString();
+            R3.Content = l.R3.ToString();
+            R4.Content = l.R4.ToString();
         }
     }
 }
