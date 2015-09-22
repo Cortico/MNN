@@ -70,11 +70,34 @@ namespace MNN
             n.ForEach(i => removeAcento(i));
             return n;
         }
+
+        public int calculaEU (List<List<int>> consoantes)
+        {
+
+        int aux = 0, aux2 = 0;
+
+        foreach (List<int> i in consoantes)
+        {
+            aux = 0;
+            foreach (int v in i)
+            {
+                aux = aux + v;
+            }
+                aux2 = (1 + (aux - 1) % 9) + aux2;
+            }
+
+            if (aux2 >= 10 && aux2 != 11 && aux2 != 22)
+            {
+                aux2 = 1 + (aux2 - 1) % 9;
+            }
+
+        return aux2;
+        }
+
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
         {
             leitura l = new leitura();
             nome = nome.ToUpper();
-            int auxMO = 0, auxMO2 = 0;
 
 
             // quebra o nome onde tem espaço e converte pra lista
@@ -108,25 +131,8 @@ namespace MNN
                 }
             }
 
-            foreach (List<int> i in consoantes)
-            {
-                foreach (int v in i)
-                {
-                    auxMO = auxMO + v;
-                }
-                auxMO2 = 1 + (auxMO - 1) % 9;
-                //do
-                //{
-                //    if (auxMO % 10 < 1)
-                //    {
-                //        auxMO2 = auxMO2 + auxMO;
-                //    }
-                //    else
-                //    {
-                //        auxMO2 = (((auxMO - auxMO % 10) / 10) + auxMO % 10) + auxMO2;
-                //    }
-                //} while (auxMO2 % 10 >= 1 || auxMO2 != 11 || auxMO2 != 22);
-            }
+            l.EU = calculaEU(consoantes);
+
             return l;
         }
 
