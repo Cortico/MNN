@@ -170,15 +170,20 @@ namespace MNN
             return C;
         }
 
-        private int calculaRs()
+        private realizacao calculaRs(int CD)
         {
-            return 1;
+            realizacao r = new realizacao();
+            r.iR1 = 36 - CD;    // Idade de R1
+            r.iR2 = r.iR1 + 10;
+            r.iR3 = r.iR2 + 10;
+            return r;
         }
 
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
         {
             leitura l = new leitura();
             caminho c = new caminho();
+            realizacao r = new realizacao();
             nome = nome.ToUpper();
 
 
@@ -228,6 +233,10 @@ namespace MNN
             l.R2 = c.R2;
             l.R3 = c.R3;
             l.R4 = c.R4;
+            r = calculaRs(l.CD);
+            l.iR1 = r.iR1;
+            l.iR2 = r.iR2;
+            l.iR3 = r.iR3;
 
             return l;
         }
