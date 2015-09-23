@@ -64,7 +64,21 @@ namespace MNN
         {
             get; set;
         }
-
-
+        public int iR1
+        {
+            get; set;
+        }
+        public int iR2
+        {
+            get; set;
+        }
+        public int iR3
+        {
+            get; set;
+        }
+        public int iR4
+        {
+            get; set;
+        }
     }
 }
