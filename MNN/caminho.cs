@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Classe criada para o tratamento simultâneo do Caminho do Destino e dos ciclos de vida.
+// Classe criada para o tratamento simultâneo do Caminho do Destino e dos ciclos e desafios da vida.
 namespace MNN
 {
     class caminho
@@ -22,6 +22,18 @@ namespace MNN
             get; set;
         }
         public int C3
+        {
+            get; set;
+        }
+        public int D1
+        {
+            get; set;
+        }
+        public int D2
+        {
+            get; set;
+        }
+        public int DM
         {
             get; set;
         }
