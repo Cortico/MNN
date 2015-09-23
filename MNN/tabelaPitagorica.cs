@@ -119,9 +119,34 @@ namespace MNN
             return EX;
         }
 
+        private caminho calculaCD(DateTime dataNasc)
+        {
+            int aux = 0;
+            caminho C = new caminho();
+
+            aux = dataNasc.Day;
+            if (aux >= 10 && aux != 11 && aux != 22)
+            {
+                C.C2 = 1 + (aux - 1) % 9;
+            }
+            aux = dataNasc.Month;
+            if (aux >= 10 && aux != 11 && aux != 22)
+            {
+                C.C1 = 1 + (aux - 1) % 9;
+            }
+            aux = dataNasc.Year;
+            if (aux >= 10 && aux != 11 && aux != 22)
+            {
+                C.C3 = 1 + (aux - 1) % 9;
+            }
+            C.CD = C.C1 + C.C2 + C.C3;
+            return C;
+        }
+
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
         {
             leitura l = new leitura();
+            caminho c = new caminho();
             nome = nome.ToUpper();
 
 
@@ -159,7 +184,12 @@ namespace MNN
             l.MO = calculaMO(vogais);
             l.EU = calculaEU(consoantes);
             l.EX = calculaEX(l.MO, l.EU);
-            
+            c = calculaCD(dataNasc);
+            l.CD = c.CD;
+            l.C1 = c.C1;
+            l.C2 = c.C2;
+            l.C3 = c.C3;
+
             return l;
         }
 
