@@ -151,11 +151,11 @@ namespace MNN
 
             // Cálculo dos Desafios
             C.D1 = auxDia - auxMes;
-            Math.Abs(C.D1);
+            C.D1 = Math.Abs(C.D1);
             C.D2 = auxMes - auxAno;
-            Math.Abs(C.D2);
+            C.D2 = Math.Abs(C.D2);
             C.DM = C.D1 - C.D2;
-            Math.Abs(C.DM);
+            C.DM = Math.Abs(C.DM);
 
             // Cáluclo das Realizações
             C.R1 = auxDia + auxMes;
@@ -168,6 +168,11 @@ namespace MNN
             C.R4 = 1 + (C.R4 - 1) % 9;
 
             return C;
+        }
+
+        private int calculaRs()
+        {
+            return 1;
         }
 
         public leitura efetuaLeitura(string nome, DateTime dataNasc)
