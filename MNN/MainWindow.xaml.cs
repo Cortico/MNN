@@ -24,8 +24,6 @@ namespace MNN
         {
             InitializeComponent();
             idade.Visibility = Visibility.Hidden;
-            //tabelaPitagorica tp = new tabelaPitagorica();
-            //leitura l = tp.efetuaLeitura("Diogo Bernini Milagres", DateTime.Today);
         }
 
         private int calculaIdade(){
@@ -48,7 +46,11 @@ namespace MNN
 
         private void gerar_Click(object sender, RoutedEventArgs e)
         {
+            //tabelaPitagorica tp = new tabelaPitagorica();
+            //leitura l = tp.efetuaLeitura("Diogo Bernini Milagres", DateTime.Today);
+
             calculaIdade();
+
             tabelaPitagorica tp = new tabelaPitagorica();
             leitura l = tp.efetuaLeitura(nome.Text, data.SelectedDate.Value);
             MO.Content = l.MO.ToString();
