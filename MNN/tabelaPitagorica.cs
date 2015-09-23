@@ -157,6 +157,16 @@ namespace MNN
             C.DM = C.D1 - C.D2;
             Math.Abs(C.DM);
 
+            // Cáluclo das Realizações
+            C.R1 = auxDia + auxMes;
+            C.R1 = 1 + (C.R1 - 1) % 9; // por precaução, os numeros são reduzidos a apenas um mesmo quando são apenas um.
+            C.R2 = auxDia + auxAno;
+            C.R2 = 1 + (C.R2 - 1) % 9;
+            C.R3 = C.R1 + C.R2;
+            C.R3 = 1 + (C.R3 - 1) % 9;
+            C.R4 = auxAno + auxMes;
+            C.R4 = 1 + (C.R4 - 1) % 9;
+
             return C;
         }
 
@@ -209,6 +219,10 @@ namespace MNN
             l.D1 = c.D1;
             l.D2 = c.D2;
             l.DM = c.DM;
+            l.R1 = c.R1;
+            l.R2 = c.R2;
+            l.R3 = c.R3;
+            l.R4 = c.R4;
 
             return l;
         }
