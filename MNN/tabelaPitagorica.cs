@@ -159,13 +159,25 @@ namespace MNN
 
             // Cáluclo das Realizações
             C.R1 = auxDia + auxMes;
-            C.R1 = 1 + (C.R1 - 1) % 9; // por precaução, os numeros são reduzidos a apenas um mesmo quando são apenas um.
+            if (C.R1 >=10 && C.R1 != 11 && C.R1 != 22)
+            {
+                C.R1 = 1 + (C.R1 - 1) % 9;
+            }
             C.R2 = auxDia + auxAno;
-            C.R2 = 1 + (C.R2 - 1) % 9;
+            if (C.R2 >= 10 && C.R2 != 11 && C.R2 != 22)
+            {
+                C.R2 = 1 + (C.R2 - 1) % 9;
+            }
             C.R3 = C.R1 + C.R2;
-            C.R3 = 1 + (C.R3 - 1) % 9;
+            if (C.R3 >= 10 && C.R3 != 11 && C.R3 != 22)
+            {
+                C.R3 = 1 + (C.R3 - 1) % 9;
+            }
             C.R4 = auxAno + auxMes;
-            C.R4 = 1 + (C.R4 - 1) % 9;
+            if (C.R4 >= 10 && C.R4 != 11 && C.R4 != 22)
+            {
+                C.R4 = 1 + (C.R4 - 1) % 9;
+            }
 
             return C;
         }
