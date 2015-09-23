@@ -76,9 +76,5 @@ namespace MNN
         {
             get; set;
         }
-        public int iR4
-        {
-            get; set;
-        }
     }
 }
