@@ -121,25 +121,27 @@ namespace MNN
 
         private caminho calculaCD(DateTime dataNasc)
         {
-            int aux = 0;
             caminho C = new caminho();
-
-            aux = dataNasc.Day;
-            if (aux >= 10 && aux != 11 && aux != 22)
+            C.C2 = dataNasc.Day;
+            if (C.C2 >= 10 && C.C2 != 11 && C.C2 != 22)
             {
-                C.C2 = 1 + (aux - 1) % 9;
+                C.C2 = 1 + (C.C2 - 1) % 9;
             }
-            aux = dataNasc.Month;
-            if (aux >= 10 && aux != 11 && aux != 22)
+            C.C1 = dataNasc.Month;
+            if (C.C1 >= 10 && C.C1 != 11 && C.C1 != 22)
             {
-                C.C1 = 1 + (aux - 1) % 9;
+                C.C1 = 1 + (C.C1 - 1) % 9;
             }
-            aux = dataNasc.Year;
-            if (aux >= 10 && aux != 11 && aux != 22)
+            C.C3 = dataNasc.Year;
+            if (C.C3 >= 10 && C.C3 != 11 && C.C3 != 22)
             {
-                C.C3 = 1 + (aux - 1) % 9;
+                C.C3 = 1 + (C.C3 - 1) % 9;
             }
             C.CD = C.C1 + C.C2 + C.C3;
+            if (C.CD >= 10 && C.CD != 11 && C.CD != 22)
+            {
+                C.CD = 1 + (C.CD - 1) % 9;
+            }
             return C;
         }
 
