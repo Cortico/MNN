@@ -119,13 +119,15 @@ namespace MNN
             return EX;
         }
 
-        private caminho calculaCD(DateTime dataNasc)
+        private caminho usaNasc(DateTime dataNasc)
         {
+            int auxDia = 0, auxMes = 0, auxAno = 0;
             caminho C = new caminho();
-            C.C2 = dataNasc.Day;
+
+            C.C2 = dataNasc.Day; // neste ponto, C.C2 pode não representar o valor de C2
             if (C.C2 >= 10 && C.C2 != 11 && C.C2 != 22)
             {
-                C.C2 = 1 + (C.C2 - 1) % 9;
+                C.C2 = 1 + (C.C2 - 1) % 9; // Neste ponto, C.C2 definitivamente representa C2.
             }
             C.C1 = dataNasc.Month;
             if (C.C1 >= 10 && C.C1 != 11 && C.C1 != 22)
@@ -137,11 +139,24 @@ namespace MNN
             {
                 C.C3 = 1 + (C.C3 - 1) % 9;
             }
-            C.CD = C.C1 + C.C2 + C.C3;
+            // As linha de código seguintes reduzem todos os C.C* para apenas um digito e os soma para encontrar CD
+            auxDia = (1 + (C.C2 - 1) % 9);
+            auxMes = (1 + (C.C1 - 1) % 9);
+            auxAno = (1 + (C.C3 - 1) % 9);
+            C.CD = auxDia + auxAno + auxMes;
             if (C.CD >= 10 && C.CD != 11 && C.CD != 22)
             {
                 C.CD = 1 + (C.CD - 1) % 9;
             }
+
+            // Cálculo dos Desafios
+            C.D1 = auxDia - auxMes;
+            Math.Abs(C.D1);
+            C.D2 = auxMes - auxAno;
+            Math.Abs(C.D2);
+            C.DM = C.D1 - C.D2;
+            Math.Abs(C.DM);
+
             return C;
         }
 
@@ -186,11 +201,14 @@ namespace MNN
             l.MO = calculaMO(vogais);
             l.EU = calculaEU(consoantes);
             l.EX = calculaEX(l.MO, l.EU);
-            c = calculaCD(dataNasc);
+            c = usaNasc(dataNasc);
             l.CD = c.CD;
             l.C1 = c.C1;
             l.C2 = c.C2;
             l.C3 = c.C3;
+            l.D1 = c.D1;
+            l.D2 = c.D2;
+            l.DM = c.DM;
 
             return l;
         }
