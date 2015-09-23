@@ -46,9 +46,6 @@ namespace MNN
 
         private void gerar_Click(object sender, RoutedEventArgs e)
         {
-            //tabelaPitagorica tp = new tabelaPitagorica();
-            //leitura l = tp.efetuaLeitura("Diogo Bernini Milagres", DateTime.Today);
-
             calculaIdade();
 
             tabelaPitagorica tp = new tabelaPitagorica();
@@ -70,7 +67,7 @@ namespace MNN
             iR1.Content = "0/" + l.iR1.ToString();
             iR2.Content = (l.iR1 + 1).ToString() + "/" + l.iR2.ToString();
             iR3.Content = (l.iR2 + 1).ToString() + "/" + l.iR3.ToString();
-            iR4.Content = (l.iR3 + 1).ToString() + "(+)";
+            iR4.Content = (l.iR3).ToString() + "+";
         }
     }
 }
